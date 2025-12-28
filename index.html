@@ -1,0 +1,195 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="London AI School — project-based AI research formation with AI mentors and human expert calibration. No courses. No certificates. No job guarantees." />
+  <title>London AI School</title>
+  <style>
+    :root{
+      --bg:#0b0f17;
+      --card:rgba(255,255,255,0.06);
+      --subtle:rgba(255,255,255,0.12);
+      --text:rgba(255,255,255,0.92);
+      --muted:rgba(255,255,255,0.68);
+      --accent:#86a8ff;
+      --accent2:#7ef0c3;
+      --max:920px;
+      --radius:18px;
+      --shadow:0 20px 60px rgba(0,0,0,0.45);
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{box-sizing:border-box}
+    body{
+      margin:0;
+      background:
+        radial-gradient(1200px 700px at 20% 10%, rgba(134,168,255,0.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 20%, rgba(126,240,195,0.12), transparent 55%),
+        var(--bg);
+      color:var(--text);
+      font-family:var(--sans);
+      line-height:1.55;
+    }
+    .wrap{max-width:var(--max); margin:0 auto; padding:32px 20px 70px;}
+    header{
+      display:flex; align-items:center; justify-content:space-between; gap:16px;
+      padding:10px 0 18px;
+    }
+    .brand{display:flex; align-items:center; gap:12px;}
+    .mark{
+      width:34px; height:34px; border-radius:10px;
+      background: linear-gradient(135deg, rgba(134,168,255,0.95), rgba(126,240,195,0.85));
+      box-shadow: 0 10px 25px rgba(0,0,0,0.35);
+    }
+    .brand h1{margin:0; font-size:15px; letter-spacing:0.2px; font-weight:650;}
+    .small{font-size:12px; color:rgba(255,255,255,0.62); margin-top:2px;}
+    .hero{padding:22px 0 12px;}
+    .kicker{
+      display:inline-flex; align-items:center; gap:10px;
+      font-family:var(--mono); font-size:12px; color:rgba(255,255,255,0.78);
+      border:1px solid var(--subtle); background:rgba(255,255,255,0.03);
+      padding:8px 12px; border-radius:999px;
+    }
+    .kdot{width:8px; height:8px; border-radius:99px; background:var(--accent2); box-shadow:0 0 0 4px rgba(126,240,195,0.12);}
+    h2{
+      font-size: clamp(34px, 5vw, 54px);
+      line-height:1.06;
+      margin:14px 0 10px;
+      letter-spacing:-0.6px;
+    }
+    p{margin:0; color:var(--muted); font-size:16px; max-width:70ch;}
+    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
+    .btn{
+      display:inline-flex; align-items:center; justify-content:center;
+      padding:11px 14px; border-radius:12px; font-size:14px;
+      border:1px solid var(--subtle);
+      background:rgba(255,255,255,0.03);
+      color:var(--text);
+      text-decoration:none;
+    }
+    .btn.primary{
+      background: linear-gradient(135deg, rgba(134,168,255,0.95), rgba(126,240,195,0.85));
+      border-color:transparent;
+      color: rgba(11,15,23,0.98);
+      font-weight:650;
+    }
+    .btn:hover{transform:translateY(-1px); transition:transform 120ms ease;}
+    .card{
+      margin-top:16px;
+      background:var(--card);
+      border:1px solid var(--subtle);
+      border-radius:var(--radius);
+      padding:18px;
+      box-shadow:var(--shadow);
+    }
+    .grid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:16px;}
+    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr;}}
+    .card h3{margin:0 0 8px; font-size:16px; letter-spacing:-0.1px;}
+    ul{margin:10px 0 0; padding:0; list-style:none;}
+    li{
+      padding:10px 0;
+      border-top:1px solid rgba(255,255,255,0.08);
+      color:rgba(255,255,255,0.80);
+      font-size:14px;
+    }
+    li:first-child{border-top:0; padding-top:2px;}
+    .subline{
+      margin-top:10px;
+      font-family:var(--mono);
+      font-size:12.5px;
+      color:rgba(255,255,255,0.62);
+    }
+    footer{
+      margin-top:28px;
+      padding-top:16px;
+      border-top:1px solid rgba(255,255,255,0.10);
+      color:rgba(255,255,255,0.60);
+      font-size:12.5px;
+      display:flex; flex-wrap:wrap; gap:10px;
+      align-items:center; justify-content:space-between;
+    }
+    .links{display:flex; gap:10px; flex-wrap:wrap;}
+    .links a{color:rgba(255,255,255,0.60); text-decoration:none;}
+    .links a:hover{color:rgba(255,255,255,0.90); text-decoration:underline; text-underline-offset:3px;}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>London AI School</h1>
+          <div class="small">Project-based · AI mentors at scale · Human expert calibration</div>
+        </div>
+      </div>
+      <!-- Optional: keep header minimal; no nav in Phase-0 -->
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="kicker"><span class="kdot" aria-hidden="true"></span> Pilot exploration · Phase-0</div>
+        <h2>Project-based AI formation.<br/>Not course-based.</h2>
+        <p>
+          London AI School is an independent, project-based environment for building and critiquing advanced AI systems.
+          Work is guided primarily by <strong>AI research mentors</strong>, with <strong>human experts</strong> involved only at critical decision points.
+        </p>
+
+        <p class="subline">No courses. No certificates. No job guarantees.</p>
+
+        <div class="ctaRow">
+          <!-- TODO: replace with your real EOI link -->
+          <a class="btn primary" href="https://forms.gle/YOUR_GOOGLE_FORM" target="_blank" rel="noreferrer">Express interest</a>
+          <!-- TODO: replace with your real email/domain -->
+          <a class="btn" href="mailto:hello@YOURDOMAIN.TLD?subject=London%20AI%20School%20EOI">Email us</a>
+        </div>
+
+        <p class="subline">If this resonates, leave a short note. This is not a formal application.</p>
+      </section>
+
+      <section class="grid">
+        <div class="card">
+          <h3>What this is</h3>
+          <ul>
+            <li><strong>Project-first</strong> work on advanced AI systems, agents, reasoning, and evaluation.</li>
+            <li><strong>AI mentors</strong> provide continuous critique, iteration support, and rigor checks.</li>
+            <li><strong>Human experts</strong> review only at key milestones and high-stakes decisions.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h3>What this is not</h3>
+          <ul>
+            <li><strong>Not</strong> a degree-awarding or accredited institution.</li>
+            <li><strong>Not</strong> a bootcamp, course platform, or certificate program.</li>
+            <li><strong>Not</strong> designed for complete beginners.</li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="card">
+        <h3>Who it’s for</h3>
+        <p>
+          People already working with AI who want to build or critique real systems—comfortable with ambiguity,
+          iteration, and sharp feedback.
+        </p>
+        <p class="subline">Not sure? Send a short note via the EOI form and we’ll respond if there’s a fit.</p>
+      </section>
+
+      <footer>
+        <div>
+          <div style="font-weight:650;color:rgba(255,255,255,0.84);">London AI School</div>
+          <div class="small">Independent · London-based, globally oriented</div>
+        </div>
+        <div class="links">
+          <!-- TODO: update links -->
+          <a href="mailto:hello@YOURDOMAIN.TLD">Email</a>
+          <a href="https://www.linkedin.com/company/YOURPAGE" target="_blank" rel="noreferrer">LinkedIn</a>
+          <a href="https://x.com/YOURHANDLE" target="_blank" rel="noreferrer">X</a>
+        </div>
+      </footer>
+    </main>
+  </div>
+</body>
+</html>
