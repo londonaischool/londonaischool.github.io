@@ -5,152 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta name="description" content="London AI School — project-based AI research formation with AI mentors and human expert calibration. No courses. No certificates. No job guarantees." />
   <title>London AI School</title>
-  <style>
-    :root{
-      /* === London Blue (唯一主色；不使用 dark 体系) === */
-      --primary:#1E3A8A;       /* London Blue */
-      --primary-soft:#E8EEFA;  /* 极浅蓝，仅作点缀背景 */
-
-      /* === Backgrounds === */
-      --bg:#F7F9FC;            /* 页面主背景（浅） */
-      --card:#FFFFFF;          /* 卡片背景 */
-      --subtle:#E5E7EB;        /* 边框线 */
-
-      /* === Text === */
-      --text:#1F2937;          /* 主文字 */
-      --muted:#4B5563;         /* 次文字 */
-
-      /* === Layout === */
-      --max:920px;
-      --radius:18px;
-      --shadow:0 10px 30px rgba(0,0,0,0.08);
-
-      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono","Courier New", monospace;
-      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
-    }
-
-    *{box-sizing:border-box}
-
-    body{
-      margin:0;
-      background: var(--bg);
-      color:var(--text);
-      font-family:var(--sans);
-      line-height:1.55;
-    }
-
-    .wrap{max-width:var(--max); margin:0 auto; padding:32px 20px 70px;}
-
-    header{
-      display:flex; align-items:center; justify-content:space-between; gap:16px;
-      padding:10px 0 18px;
-    }
-
-    .brand{display:flex; align-items:center; gap:12px;}
-
-    .mark{
-      width:34px; height:34px; border-radius:10px;
-      background: var(--primary);
-      box-shadow: 0 6px 16px rgba(0,0,0,0.12);
-    }
-
-    .brand h1{margin:0; font-size:15px; letter-spacing:0.2px; font-weight:650;}
-    .small{font-size:12px; color:var(--muted); margin-top:2px;}
-
-    .hero{padding:22px 0 12px;}
-
-    .kicker{
-      display:inline-flex; align-items:center; gap:10px;
-      font-family:var(--mono); font-size:12px; color:var(--muted);
-      border:1px solid var(--subtle);
-      background: var(--card);
-      padding:8px 12px; border-radius:999px;
-    }
-
-    .kdot{
-      width:8px; height:8px; border-radius:99px;
-      background: var(--primary);
-      box-shadow:0 0 0 4px rgba(30,58,138,0.12);
-    }
-
-    h2{
-      font-size: clamp(34px, 5vw, 54px);
-      line-height:1.06;
-      margin:14px 0 10px;
-      letter-spacing:-0.6px;
-      color: var(--primary);
-    }
-
-    p{margin:0; color:var(--muted); font-size:16px; max-width:70ch;}
-
-    .ctaRow{display:flex; gap:12px; flex-wrap:wrap; margin-top:16px;}
-
-    .btn{
-      display:inline-flex; align-items:center; justify-content:center;
-      padding:11px 14px; border-radius:12px; font-size:14px;
-      border:1px solid var(--subtle);
-      background: var(--card);
-      color: var(--primary);
-      text-decoration:none;
-      transition:transform 120ms ease;
-    }
-
-    .btn.primary{
-      background: var(--primary);
-      border-color: var(--primary);
-      color:#fff;
-      font-weight:650;
-    }
-
-    .btn:hover{transform:translateY(-1px);}
-
-    .card{
-      margin-top:16px;
-      background:var(--card);
-      border:1px solid var(--subtle);
-      border-radius:var(--radius);
-      padding:18px;
-      box-shadow:var(--shadow);
-    }
-
-    .grid{display:grid; grid-template-columns:1fr; gap:14px; margin-top:16px;}
-    @media(min-width:860px){.grid{grid-template-columns:1fr 1fr;}}
-
-    .card h3{margin:0 0 8px; font-size:16px; letter-spacing:-0.1px; color:var(--text);}
-
-    ul{margin:10px 0 0; padding:0; list-style:none;}
-
-    li{
-      padding:10px 0;
-      border-top:1px solid var(--subtle);
-      color:var(--text);
-      font-size:14px;
-    }
-
-    li:first-child{border-top:0; padding-top:2px;}
-
-    .subline{
-      margin-top:10px;
-      font-family:var(--mono);
-      font-size:12.5px;
-      color:var(--muted);
-    }
-
-    footer{
-      margin-top:28px;
-      padding-top:16px;
-      border-top:1px solid var(--subtle);
-      color:var(--muted);
-      font-size:12.5px;
-      display:flex; flex-wrap:wrap; gap:10px;
-      align-items:center; justify-content:space-between;
-      background: transparent;
-    }
-
-    .links{display:flex; gap:10px; flex-wrap:wrap;}
-    .links a{color:var(--primary); text-decoration:none;}
-    .links a:hover{text-decoration:underline; text-underline-offset:3px;}
-  </style>
+  <!-- External stylesheet -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
   <div class="wrap">
@@ -159,22 +15,35 @@
         <div class="mark" aria-hidden="true"></div>
         <div>
           <h1>London AI School</h1>
-          <div class="small">Project-based · AI mentors at scale · Human expert calibration</div>
+          <div class="small">Build · Research · Explore — with personalised AI mentor agents</div>
         </div>
       </div>
       <!-- Optional: keep header minimal; no nav in Phase-0 -->
+        <nav class="nav">
+         
+          <a href="/posts.html">Posts</a>
+    <a href="/resources.html">Resources</a>
+    <a href="/about.html">About</a>
+  </nav>
     </header>
 
     <main>
       <section class="hero">
         <div class="kicker"><span class="kdot" aria-hidden="true"></span> Pilot exploration · Phase-0</div>
-        <h2>Project-based AI formation.<br/>Not course-based.</h2>
+        <h2>
+        Learn AI by building real systems.<br/>
+        Research and explore what follows.
+        </h2>
         <p>
-          London AI School is an independent, project-based environment for building and critiquing advanced AI systems.
-          Work is guided primarily by <strong>AI research mentors</strong>, with <strong>human experts</strong> involved only at critical decision points.
-        </p>
+  London AI School is an independent, project-driven environment where people
+  <strong>learn AI by building real systems</strong>, and progress toward
+  <strong>research and open exploration</strong> as projects mature.
+  Work is guided primarily by <strong>personalised AI mentor agents</strong>,
+  with <strong>human experts</strong> involved selectively at critical decision
+  points for calibration and direction.
+</p>
 
-        <p class="subline">No courses. No certificates. No job guarantees.</p>
+        <p class="subline">Progress is measured through projects, not credentials.</p>
 
         <div class="ctaRow">
           <a class="btn primary" href="https://forms.gle/RnL6Sz1wyr31j46T9" target="_blank" rel="noreferrer">Express interest</a>
@@ -185,38 +54,56 @@
       </section>
 
       <section class="grid">
-        <div class="card">
-          <h3>What this is</h3>
-          <ul>
-            <li><strong>Project-first</strong> work on advanced AI systems, agents, reasoning, and evaluation.</li>
-            <li><strong>AI mentors</strong> provide continuous critique, iteration support, and rigor checks.</li>
-            <li><strong>Human experts</strong> review only at key milestones and high-stakes decisions.</li>
-          </ul>
-        </div>
+       <div class="card">
+  <h3>What this is</h3>
+  <ul>
+    <li>
+      <strong>Project-driven</strong> work on building, researching, and exploring
+      advanced AI systems, agents, reasoning, and evaluation.
+    </li>
+    <li>
+      <strong>Personalised AI mentor agents</strong> provide continuous guidance,
+      critique, and iteration support throughout the project lifecycle.
+    </li>
+    <li>
+      <strong>Human experts</strong> are involved selectively at key milestones and
+      high-stakes decision points for calibration and direction.
+    </li>
+  </ul>
+</div>
 
-        <div class="card">
-          <h3>What this is not</h3>
-          <ul>
-            <li><strong>Not</strong> a degree-awarding or accredited institution.</li>
-            <li><strong>Not</strong> a bootcamp, course platform, or certificate program.</li>
-            <li><strong>Not</strong> designed for complete beginners.</li>
-          </ul>
-        </div>
+<div class="card">
+  <h3>What this is not</h3>
+  <ul>
+    <li>
+      <strong>Not</strong> a degree-awarding or accredited institution.
+    </li>
+    <li>
+      <strong>Not</strong> a bootcamp, course platform, or credentialing programme.
+    </li>
+    <li>
+      <strong>Not</strong> a guided introduction to AI fundamentals.
+    </li>
+  </ul>
+</div>
       </section>
 
       <section class="card">
         <h3>Who it’s for</h3>
         <p>
-          People already working with AI who want to build or critique real systems—comfortable with ambiguity,
-          iteration, and sharp feedback.
-        </p>
+  People from any background who want to
+  <strong>learn AI by building real systems</strong>,
+  and are willing to work through ambiguity,
+  iteration, and rigorous feedback as projects
+  develop toward research and exploration.
+</p>
         <p class="subline">Not sure? Send a short note via the EOI form and we’ll respond if there’s a fit.</p>
       </section>
 
       <footer>
         <div>
           <div style="font-weight:650;color:var(--text);">London AI School</div>
-          <div class="small">Independent · London-based, globally oriented</div>
+          <div class="small">Independent · Project-driven, globally oriented</div>
         </div>
         <div class="links">
           <!-- TODO: update links -->
