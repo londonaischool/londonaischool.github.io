@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Benchmarking AI Tutors — from answer correctness to pedagogical guidance." />
+  <title>Benchmarking AI Tutors · London AI School</title>
+  <link rel="stylesheet" href="../../styles.css" />
+</head>
+
+<body>
+  <div class="wrap">
+    <!-- Header (unchanged from main site) -->
+    <header>
+      <div class="brand">
+        <div class="mark" aria-hidden="true"></div>
+        <div>
+          <h1>London AI School</h1>
+          <div class="small">Build · Research · Explore — with personalised AI mentor agents</div>
+        </div>
+      </div>
+      <nav class="nav">
+        <a href="/posts.html">Posts</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </header>
+
+    <!-- Blog content -->
+    <main style="max-width: 760px; margin: 0 auto; padding: 2.5rem 0;">
+      <article>
+
+        <p class="small" style="letter-spacing:.02em; opacity:.8;">
+          Research blog · Evaluation
+        </p>
+
+        <h1>Benchmarking AI Tutors:<br/>From Answer Correctness to Pedagogical Guidance</h1>
+
+        <p>
+          Large language models have achieved impressive performance on benchmarks that
+          reward <strong>answer correctness</strong> and <strong>task completion</strong>.
+          However, when these systems are deployed in educational settings, this evaluation
+          paradigm quickly breaks down.
+        </p>
+
+        <p>
+          Education does not primarily require systems that solve problems.
+          It requires systems that <strong>support learning</strong>.
+        </p>
+
+        <p>
+          An <strong>AI Tutor</strong> should help learners reason, diagnose misunderstandings,
+          and decide what to do next—<em>without providing the final answer</em>.
+          As a result, benchmarks designed for solvers are fundamentally misaligned with
+          the goals of AI tutoring.
+        </p>
+
+        <h3>Why answer-based evaluation fails</h3>
+
+        <p>
+          Most widely used benchmarks assume that the best model is the one that produces
+          the correct output as efficiently as possible. In educational contexts, this
+          assumption fails for several reasons:
+        </p>
+
+        <p>• Providing answers can undermine learning and exploration.</p>
+        <p>• Execution skill is not equivalent to pedagogical skill.</p>
+        <p>• Optimising for correctness encourages solution leakage.</p>
+        <p>• The benchmark reward signal conflicts with learning goals.</p>
+
+        <p>
+          Systems optimised under this paradigm tend to behave like
+          <strong>assistants or solvers</strong>, not tutors.
+        </p>
+
+        <h3>What recent tutoring benchmarks show</h3>
+
+        <p>
+          Recent work on AI tutoring benchmarks and evaluation frameworks demonstrates
+          a clear shift away from answer correctness toward evaluating
+          <strong>pedagogical behaviour</strong>.
+        </p>
+
+        <p>
+          Across independently developed efforts, several shared principles have emerged:
+        </p>
+
+        <p>
+          • <strong>Human-curated pedagogical ground truth.</strong>
+          Expert annotators define pedagogical intent through rubrics or structured labels
+          (e.g. diagnosis quality, appropriateness of guidance, degree of answer revealing),
+          rather than specifying a single correct solution&nbsp;[1,2].
+        </p>
+
+        <p>
+          • <strong>Explicit separation between tutoring and solving.</strong>
+          Evaluation frameworks increasingly penalise direct answer giving and reward
+          scaffolding behaviours such as diagnosis, hinting, and next-step guidance&nbsp;[1,2].
+        </p>
+
+        <p>
+          • <strong>Automated evaluation at test time.</strong>
+          While pedagogical criteria are authored by humans offline, evaluation is designed
+          to scale via automated scoring or rubric-based judges, without students or
+          instructors in the loop&nbsp;[1,2].
+        </p>
+
+        <p>
+          • <strong>Multi-dimensional assessment.</strong>
+          Tutoring quality is evaluated along multiple pedagogical dimensions, reflecting
+          the inherently multi-faceted nature of teaching&nbsp;[1,2].
+        </p>
+
+        <h3>Representative work</h3>
+
+        <p>
+          Two recent efforts exemplify this shift:
+        </p>
+
+        <p>
+          • <em>Towards Responsible Development of Generative AI for Education:
+          An Evaluation-Driven Approach</em> argues for evaluation-first design of
+          educational AI systems, emphasising human-defined pedagogical criteria and
+          explicit separation between guidance and answer production&nbsp;[1].
+        </p>
+
+        <p>
+          • <em>TutorBench</em> introduces a large-scale tutoring benchmark using
+          instance-specific expert rubrics and automated evaluation to assess adaptive
+          explanations, actionable feedback, and active learning support—explicitly
+          penalising answer revealing&nbsp;[2].
+        </p>
+
+        <h3>What is still missing</h3>
+
+        <p>
+          Despite this progress, important gaps remain.
+        </p>
+
+        <p>
+          Most existing benchmarks focus on tutoring <strong>individual questions</strong>.
+          However, much real learning—particularly at university or professional level—
+          takes place through:
+        </p>
+
+        <p>• Extended projects.</p>
+        <p>• Iterative experimentation.</p>
+        <p>• Debugging, refinement, and strategic decision-making.</p>
+
+        <p>
+          In addition, fluent explanations can score well even when the guidance is
+          strategically wrong. Benchmarks must therefore evaluate not just how guidance
+          is expressed, but whether it proposes the <strong>right kind of pedagogical action</strong>.
+        </p>
+
+        <h3>Our research direction</h3>
+
+        <p>
+          Building on recent work, we argue that the next generation of benchmarks for
+          AI Tutors should:
+        </p>
+
+        <p>• Evaluate <strong>guidance, not execution</strong>.</p>
+        <p>• Use <strong>human pedagogical ground truth</strong> defined offline.</p>
+        <p>• Operate at the level of <strong>actions and decisions</strong>, not answers.</p>
+        <p>• Explicitly penalise <strong>solution leakage</strong>.</p>
+
+        <p>
+          This framing aligns benchmarking with what tutoring is meant to support:
+          <strong>learning rather than outsourcing cognition</strong>.
+        </p>
+
+        <h3>Conclusion</h3>
+
+        <p>
+          As AI Tutors become integrated into higher education, professional training,
+          and project-based learning environments, benchmarks must reflect what effective
+          tutoring actually entails.
+        </p>
+
+        <p>
+          Designing benchmarks around pedagogical guidance is not merely an evaluation
+          choice—it is a statement about what kind of educational AI we believe should exist.
+        </p>
+
+        <hr style="margin:2.5rem 0; opacity:.3;" />
+
+        <p class="small">
+          <strong>References</strong><br/>
+          [1] <em>Towards Responsible Development of Generative AI for Education:
+          An Evaluation-Driven Approach</em>, arXiv:2407.12687.<br/>
+          [2] <em>TutorBench: Evaluating Tutoring Capabilities of Large Language Models</em>,
+          arXiv:2510.02663.
+        </p>
+
+      </article>
+    </main>
+
+    <footer>
+      <div>
+        <div style="font-weight:650;color:var(--text);">London AI School</div>
+        <div class="small">Independent · Project-driven, globally oriented</div>
+      </div>
+      <div class="links">
+        <a href="mailto:hi@londonai.school">Email</a>
+        <a href="https://x.com/LondonAISchool" target="_blank" rel="noreferrer">X</a>
+      </div>
+    </footer>
+
+  </div>
+</body>
+</html>
