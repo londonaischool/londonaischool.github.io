@@ -171,4 +171,40 @@ footer{
     gap:10px;
   }
 }
+/* === Blog / Posts list === */
 
+.post-item{
+  padding: 1.25rem 0;
+  border-top: 1px solid var(--subtle);
+}
+
+.post-item:first-child{
+  border-top: none;
+}
+
+.post-item .meta{
+  font-size: 12px;
+  color: var(--muted);
+}
+
+.post-item h3{
+  margin: .35rem 0;
+  font-size: 18px;
+  line-height: 1.35;
+}
+
+.post-item h3 a{
+  color: var(--primary);
+  text-decoration: none;
+}
+
+.post-item h3 a:hover{
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.post-item p{
+  margin: .35rem 0 0;
+  color: var(--text);
+  font-size: 15px;
+}
